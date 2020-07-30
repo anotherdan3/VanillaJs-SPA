@@ -12,7 +12,7 @@ module.exports = {
     filename: "main.js", //ombre del archivo final para produccion.
   },
   resolve: {
-    extension: [".js"], //Extensiones a utilizar.
+    extensions: [".js"], //Extensiones a utilizar.
   },
   module: {
     //El modulo con las reglas a usar
