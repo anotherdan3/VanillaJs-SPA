@@ -2,6 +2,7 @@
 const path = require("path");
 //Dependencia necesaria para trabajar con HTML
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 //Configuracion de lo que va suceder. Modulo para exportar.
 module.exports = {
@@ -37,5 +38,13 @@ module.exports = {
         filename: "./index.html", //El nombre que tendra el archivo
       }
     ),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "./src/styles/styles.css",
+          to: "",
+        },
+      ],
+    }),
   ],
 };
